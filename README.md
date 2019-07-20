@@ -1,4 +1,4 @@
-# tunegraphy
+# Tunegraphy
 Using [Scipy](https://www.scipy.org) and [Opencv (Cv2)](https://pypi.org/project/opencv-python), this project aims to produce an accurate and relevant visual presentation (picture) of the given audio file.
 
 In order to run the project do:
