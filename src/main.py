@@ -7,7 +7,9 @@ import cv2
 
 t1 = time.time()
 
-sample_rate, samples = wavfile.read('/home/hassan/PycharmProjects/untitled/I Love You More.wav')
+addr = input('Input file\'s address:')
+
+sample_rate, samples = wavfile.read(addr)
 frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
 
 hFrequencies = []
@@ -28,10 +30,10 @@ for i in range(0, times.size):
     minFreq = min(mft, minFreq)
     hFrequencies.append((mft, maxAmpT))
 
-imgLU = cv2.imread("/home/hassan/PycharmProjects/untitled/untitled.png", cv2.IMREAD_COLOR)
-imgRU = cv2.imread("/home/hassan/PycharmProjects/untitled/untitled.png", cv2.IMREAD_COLOR)
-imgLD = cv2.imread("/home/hassan/PycharmProjects/untitled/untitled.png", cv2.IMREAD_COLOR)
-imgRD = cv2.imread("/home/hassan/PycharmProjects/untitled/untitled.png", cv2.IMREAD_COLOR)
+imgLU = cv2.imread("../blank.jpg", cv2.IMREAD_COLOR)
+imgRU = cv2.imread("../blank.jpg", cv2.IMREAD_COLOR)
+imgLD = cv2.imread("../blank.jpg", cv2.IMREAD_COLOR)
+imgRD = cv2.imread("../blank.jpg", cv2.IMREAD_COLOR)
 height, width, channels = imgLU.shape
 
 for (t, (f, a)) in enumerate(hFrequencies):
